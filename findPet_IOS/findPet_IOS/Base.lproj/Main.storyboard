@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nwZ-We-Ryx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--로그인-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="findPet_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디(이메일)를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qka-NP-CzZ">
+                                <rect key="frame" x="50" y="288" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cw7-q8-6lE"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력해수제요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-2Z-gsP">
+                                <rect key="frame" x="50" y="343" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Q8G-3C-b1q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhJ-Fq-Fr1">
+                                <rect key="frame" x="50" y="398" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="uGg-aT-e9I"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="로그인"/>
+                                <connections>
+                                    <segue destination="uJQ-9f-ILu" kind="show" id="EXr-Rj-UQQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK6-76-abZ">
+                                <rect key="frame" x="50" y="453" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="oDC-xj-kFX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="회원가입"/>
+                                <connections>
+                                    <segue destination="CKG-aD-Sih" kind="show" id="if5-hJ-f45"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qka-NP-CzZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="3dD-RT-232"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gK6-76-abZ" secondAttribute="trailing" constant="50" id="4e8-EC-fct"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cpw-2Z-gsP" secondAttribute="trailing" constant="50" id="4oP-et-bdT"/>
+                            <constraint firstItem="cpw-2Z-gsP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="F5f-Wl-1Kb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qka-NP-CzZ" secondAttribute="trailing" constant="50" id="ImY-Xc-bq3"/>
+                            <constraint firstItem="gK6-76-abZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="RCf-PE-GFq"/>
+                            <constraint firstItem="gK6-76-abZ" firstAttribute="top" secondItem="JhJ-Fq-Fr1" secondAttribute="bottom" constant="20" id="Rtk-Jn-Qov"/>
+                            <constraint firstItem="JhJ-Fq-Fr1" firstAttribute="top" secondItem="cpw-2Z-gsP" secondAttribute="bottom" constant="20" id="U7g-pH-jKr"/>
+                            <constraint firstItem="JhJ-Fq-Fr1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="aeg-7h-0en"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JhJ-Fq-Fr1" secondAttribute="trailing" constant="50" id="gTl-A3-chP"/>
+                            <constraint firstItem="cpw-2Z-gsP" firstAttribute="top" secondItem="Qka-NP-CzZ" secondAttribute="bottom" constant="20" id="htE-OG-wQi"/>
+                            <constraint firstItem="Qka-NP-CzZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="yVJ-Xe-JjI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="로그인" id="3RT-Uh-Ibz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235" y="-296"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4As-Ng-BZG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nwZ-We-Ryx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AR3-NW-656">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wjL-AD-J5w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUO-hd-VXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341" y="19"/>
+        </scene>
+        <!--메인-->
+        <scene sceneID="J62-Lx-y45">
+            <objects>
+                <viewController id="uJQ-9f-ILu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vpm-VM-Odo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wjx-oL-THf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="메인" id="Ucu-5G-ArN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ES-6B-3iP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2091" y="20"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7mA-WG-Qym">
+            <objects>
+                <viewController id="CKG-aD-Sih" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5xu-Sh-HI0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디(이메일)를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUW-N1-8PM">
+                                <rect key="frame" x="50" y="238" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="QH4-lk-fvh"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 입력해수제요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P5e-f0-NQx">
+                                <rect key="frame" x="50" y="293" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="zOj-C4-D6W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호를 한번 더 입력해수제요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uhz-Jr-RhN">
+                                <rect key="frame" x="50" y="344" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="0Vz-4M-x2v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lx8-OK-8cL">
+                                <rect key="frame" x="50" y="399" width="314" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Q8b-8l-crp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="휴대폰번호를 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whx-HD-lyC">
+                                <rect key="frame" x="50" y="454" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usk-5o-D81">
+                                <rect key="frame" x="50" y="508" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="회원가입 완료"/>
+                                <connections>
+                                    <segue destination="uJQ-9f-ILu" kind="show" id="McZ-cT-ScX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4QJ-wu-E0e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P5e-f0-NQx" firstAttribute="top" secondItem="NUW-N1-8PM" secondAttribute="bottom" constant="20" id="4Lg-uX-81G"/>
+                            <constraint firstItem="Usk-5o-D81" firstAttribute="top" secondItem="whx-HD-lyC" secondAttribute="bottom" constant="20" id="6Cf-5J-bMu"/>
+                            <constraint firstItem="Lx8-OK-8cL" firstAttribute="leading" secondItem="Uhz-Jr-RhN" secondAttribute="leading" id="8V2-9H-Xn6"/>
+                            <constraint firstItem="Usk-5o-D81" firstAttribute="leading" secondItem="4QJ-wu-E0e" secondAttribute="leading" constant="50" id="FP5-Am-QRa"/>
+                            <constraint firstItem="NUW-N1-8PM" firstAttribute="trailing" secondItem="P5e-f0-NQx" secondAttribute="trailing" id="FjY-0h-fpu"/>
+                            <constraint firstItem="NUW-N1-8PM" firstAttribute="leading" secondItem="P5e-f0-NQx" secondAttribute="leading" id="Jwn-Dc-ncf"/>
+                            <constraint firstItem="whx-HD-lyC" firstAttribute="top" secondItem="Lx8-OK-8cL" secondAttribute="bottom" constant="20" id="OFI-H2-0nO"/>
+                            <constraint firstItem="NUW-N1-8PM" firstAttribute="top" secondItem="4QJ-wu-E0e" secondAttribute="top" constant="150" id="PTM-Xb-zxm"/>
+                            <constraint firstItem="Uhz-Jr-RhN" firstAttribute="top" secondItem="P5e-f0-NQx" secondAttribute="bottom" constant="16" id="dif-0m-RYs"/>
+                            <constraint firstItem="4QJ-wu-E0e" firstAttribute="trailing" secondItem="whx-HD-lyC" secondAttribute="trailing" constant="50" id="eXq-fx-DYc"/>
+                            <constraint firstItem="Uhz-Jr-RhN" firstAttribute="leading" secondItem="P5e-f0-NQx" secondAttribute="leading" id="fLp-p4-oA3"/>
+                            <constraint firstItem="Lx8-OK-8cL" firstAttribute="top" secondItem="Uhz-Jr-RhN" secondAttribute="bottom" constant="20" id="iQJ-H4-Rh2"/>
+                            <constraint firstItem="4QJ-wu-E0e" firstAttribute="trailing" secondItem="Usk-5o-D81" secondAttribute="trailing" constant="50" id="ljD-gy-1GM"/>
+                            <constraint firstItem="Lx8-OK-8cL" firstAttribute="trailing" secondItem="Uhz-Jr-RhN" secondAttribute="trailing" id="mkX-4N-gbm"/>
+                            <constraint firstItem="Uhz-Jr-RhN" firstAttribute="trailing" secondItem="P5e-f0-NQx" secondAttribute="trailing" id="nqb-Ul-W59"/>
+                            <constraint firstItem="NUW-N1-8PM" firstAttribute="leading" secondItem="4QJ-wu-E0e" secondAttribute="leading" constant="50" id="qye-nk-cKa"/>
+                            <constraint firstItem="whx-HD-lyC" firstAttribute="leading" secondItem="4QJ-wu-E0e" secondAttribute="leading" constant="50" id="r2N-Jh-2xB"/>
+                            <constraint firstItem="NUW-N1-8PM" firstAttribute="centerX" secondItem="5xu-Sh-HI0" secondAttribute="centerX" id="uEj-iI-2t4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PcO-pO-aVV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eOk-L1-kkH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235" y="400"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="McZ-cT-ScX"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
